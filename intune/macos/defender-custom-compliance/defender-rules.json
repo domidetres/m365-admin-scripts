@@ -1,0 +1,59 @@
+{
+  "Rules": [
+    {
+      "SettingName": "DefenderInstalled",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://learn.microsoft.com/defender-endpoint/mac-install-with-intune",
+      "RemediationStrings": [
+        { "Language": "en_US", "Title": "Microsoft Defender is not installed.", "Description": "Open Company Portal, select your device and choose Check Status. Contact IT if Defender is still missing." },
+        { "Language": "de_DE", "Title": "Microsoft Defender ist nicht installiert.", "Description": "Öffnen Sie das Unternehmensportal, wählen Sie Ihr Gerät und klicken Sie auf „Status prüfen“. Fehlt Defender weiterhin, wenden Sie sich an die IT." }
+      ]
+    },
+    {
+      "SettingName": "Healthy",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://learn.microsoft.com/defender-endpoint/mac-support-install",
+      "RemediationStrings": [
+        { "Language": "en_US", "Title": "Microsoft Defender is not healthy.", "Description": "Open Microsoft Defender and follow the shown actions (e.g. grant permissions). Contact IT if the issue persists." },
+        { "Language": "de_DE", "Title": "Microsoft Defender meldet einen Fehler.", "Description": "Öffnen Sie Microsoft Defender und folgen Sie den angezeigten Hinweisen (z. B. Berechtigungen erteilen). Bleibt der Fehler, wenden Sie sich an die IT." }
+      ]
+    },
+    {
+      "SettingName": "RealTimeProtection",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": true,
+      "MoreInfoUrl": "https://learn.microsoft.com/defender-endpoint/mac-preferences",
+      "RemediationStrings": [
+        { "Language": "en_US", "Title": "Real-time protection is turned off.", "Description": "Real-time protection must be on. Contact IT." },
+        { "Language": "de_DE", "Title": "Echtzeitschutz ist ausgeschaltet.", "Description": "Der Echtzeitschutz muss aktiv sein. Bitte wenden Sie sich an die IT." }
+      ]
+    },
+    {
+      "SettingName": "DefinitionsStatus",
+      "Operator": "IsEquals",
+      "DataType": "String",
+      "Operand": "up_to_date",
+      "MoreInfoUrl": "https://learn.microsoft.com/defender-endpoint/mac-updates",
+      "RemediationStrings": [
+        { "Language": "en_US", "Title": "Defender definitions are out of date ({ActualValue}).", "Description": "Connect to the internet and wait for Defender to update. Contact IT if the issue persists." },
+        { "Language": "de_DE", "Title": "Defender-Signaturen sind nicht aktuell ({ActualValue}).", "Description": "Verbinden Sie das Gerät mit dem Internet und warten Sie auf das Update. Bleibt der Fehler, wenden Sie sich an die IT." }
+      ]
+    },
+    {
+      "SettingName": "OrgId",
+      "Operator": "IsEquals",
+      "DataType": "String",
+      "Operand": "<YOUR-DEFENDER-ORG-ID>",
+      "MoreInfoUrl": "https://learn.microsoft.com/defender-endpoint/mac-install-with-intune",
+      "RemediationStrings": [
+        { "Language": "en_US", "Title": "Defender is not onboarded to your organization.", "Description": "The onboarding profile is missing or wrong. Contact IT." },
+        { "Language": "de_DE", "Title": "Defender ist nicht bei Ihrer Organisation eingebunden.", "Description": "Das Onboarding-Profil fehlt oder ist falsch. Bitte wenden Sie sich an die IT." }
+      ]
+    }
+  ]
+}
